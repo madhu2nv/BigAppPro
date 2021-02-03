@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">BigAPP</a>
+</nav>
+
+<div class="container-fluid">
+  <div class="container">
+    <div style="display: flex;float: right;padding: 10px;">
+      <button class="btn btn-info" id="Schedule" (click)="Schedule()">Schedule Mail</button>&nbsp;&nbsp;
+      <button class="btn btn-info" id="View" (click)="ViewPage()">View/update</button>
+    </div>
+  </div>
+  <br><br><br>
+  <div *ngIf="schedulePage == true">
+    <div class="card cardStyle">
+      <div class="card-header">Schedule Mail</div>
+      <div class="card-body">
+        <div>
+          <label>Email</label>
+          <input type="email" class="form-control" name="email" [(ngModel)]="mailData">
+        </div>
+        <div>
+          <label>Date</label>
+          <input type="date" class="form-control" name="date" [(ngModel)]="date">
+        </div>
+        <div>
+          <label>Time</label>
+          <input type="time" class="form-control" name="time" [(ngModel)]="time">
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" *ngIf="saveData == true" style="float: right;"
+          (click)="SendMail(mailData,date,time)">Schedule Mail</button>
+        <button class="btn btn-primary" *ngIf="updateData == true" style="float: right;" (click)="updateEmail()">update
+          Mail</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="ViewDelete == true">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Sl.No</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Edit Mail</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of tableData;let i = index">
+          <td>{{i+1}}</td>
+          <td>{{data.EmailId}}</td>
+          <td>{{data.Status}}</td>
+          <td class="col-xs-2" (click)=editEmail(data)>
+            <span class="glyphicon glyphicon-play btn btn-info btn-lg" style="margin-left: 5px"></span>
+          </td>
+          <td class="col-xs-2" (click)=deleteEmail(data)>
+            <span class="glyphicon glyphicon-trash btn btn-info btn-lg" style="margin-left: 5px"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

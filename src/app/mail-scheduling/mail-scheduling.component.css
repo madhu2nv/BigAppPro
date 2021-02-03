@@ -1,0 +1,89 @@
+.cardStyle{
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+   .formatForButton1 {
+    background-color: #e6e6e6;
+    color: black !important;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .3rem;
+    user-select: none;
+    border: 1px solid #d0c0c0;
+    transition: color .15s 
+                ease-in-out,background-color .15s 
+                ease-in-out,border-color .15s 
+                ease-in-out,box-shadow .15s 
+                ease-in-out;
+   }
+
+   .formatForButton2 {
+    color: white !important;
+    background-color: #006699;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .3rem;
+    line-height: 1.5;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s 
+                ease-in-out,background-color .15s 
+                ease-in-out,border-color .15s 
+                ease-in-out,box-shadow .15s 
+                ease-in-out;
+   }
+   .formatForButton3 {
+    background-color: #006699;
+    color: white !important;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s 
+                ease-in-out,background-color .15s 
+                ease-in-out,border-color .15s 
+                ease-in-out,box-shadow .15s 
+                ease-in-out;
+   }
+   .formatForButton {
+    background-color:#e6e6e6;
+    color: black !important;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .3rem;
+    line-height: 1.5;
+    user-select: none;
+    border: 1px solid #d0c0c0;
+    transition: color .15s 
+                ease-in-out,background-color .15s 
+                ease-in-out,border-color .15s 
+                ease-in-out,box-shadow .15s 
+                ease-in-out;
+  
+   }
