@@ -33,23 +33,23 @@ setInterval(function () {
         }, {
             "Time": min
         }]
-    }, function (err, doc) {
+    }, function (err, doc) { 
         if (doc.length > 0) {
             for (i = 0; i < doc.length; i++) {
                 let emailData = doc[i].EmailId
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                        user: 'madhunv53@gmail.com',
-                        pass: 'Padmavpbms@35'
+                        user: 'example@gmail.com', // Add valid emailID
+                        pass: 'example@12345'        // Add password 
                     }
                 });
 
                 const options = {
-                    from: "madhu <madhunv53@gmail.com>",
+                    from: "madhu <example@gmail.com>",
                     to: doc[i].EmailId,
-                    subject: "user details",
-                    html: '<a>' + "Name:" + "madhu" + '</br>' + '</br>' +
+                    subject: "Schedule Mail",
+                    html: '<a>' + "Subject:" + "Scheduled Mail" + '</br>' + '</br>' +'</br>' +
                         "Message:" + "Hi mail successfully sent" +
                         '</a>'
 
